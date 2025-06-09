@@ -16,7 +16,7 @@ description: "IOT with nvidia-open, hardened"
 
 base-image: quay.io/fedora/fedora-iot
 
-image-version: testing
+image-version: 42
 
 modules:
   - from-file: common/common-modules.yml
