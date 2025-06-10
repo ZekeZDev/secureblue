@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Copyright 2025 The Secureblue Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -10,29 +12,6 @@
 # distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and limitations under the License.
 
-type: rpm-ostree
-repos:
-  - https://copr.fedorainfracloud.org/coprs/secureblue/hardened_malloc/repo/fedora-%OS_VERSION%/secureblue-hardened_malloc-fedora-%OS_VERSION%.repo
-  - https://copr.fedorainfracloud.org/coprs/secureblue/run0edit/repo/fedora-%OS_VERSION%/secureblue-run0edit-fedora-%OS_VERSION%.repo
-install:
-  - hardened_malloc
-  - run0edit
+set -euo pipefail
 
-  # missing upstream
-  - openssl
-  - patch
-  - p7zip
-  - distrobox
-  - toolbox
-  - podman
-  - nvme-cli
-  - hdparm
-  - wireguard-tools
-  - gettext
-  - rsync
-
-  # signing deps 
-  - sbsigntools
-
-  # application whitelisting
-  - fapolicyd
+systemctl enable fapolicyd
