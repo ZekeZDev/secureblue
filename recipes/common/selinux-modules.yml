@@ -12,6 +12,9 @@
 
 modules:
     - type: dnf
+      repos:
+        copr:
+          - secureblue/selinux-policy
       replace:
         - from-repo: copr:copr.fedorainfracloud.org:secureblue:selinux-policy
           packages:
