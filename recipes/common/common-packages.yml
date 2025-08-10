@@ -33,6 +33,3 @@ install:
 
   # signing deps 
   - sbsigntools
-
-  # application whitelisting
-  - fapolicyd
