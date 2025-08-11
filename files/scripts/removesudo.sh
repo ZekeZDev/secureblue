@@ -20,6 +20,10 @@ if [[ "$IMAGE_NAME" != *"kinoite"* ]]; then
     SUDO_PACKAGES_TO_REMOVE+=('sudo')
 fi
 
+if [[ "$IMAGE_NAME" == *"iot"* ]]; then
+    SUDO_PACKAGES_TO_REMOVE+=('arm-image-installer')
+fi
+
 rpm-ostree override remove "${SUDO_PACKAGES_TO_REMOVE[@]}"
 
 rm -rf /usr/bin/sudo
