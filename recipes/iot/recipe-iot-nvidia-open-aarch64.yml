@@ -10,7 +10,7 @@
 # distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and limitations under the License.
 
-name: iot-nvidia-open-hardened-aarch64
+name: iot-nvidia-open-hardened
 
 description: "IOT with nvidia-open, hardened"
 
@@ -18,6 +18,9 @@ base-image: quay.io/fedora/fedora-iot
 
 image-version: 42-aarch64
 
+alt-tags:
+  - latest-aarch64
+  
 modules:
   - from-file: common/common-modules.yml
   - from-file: common/server-modules.yml
