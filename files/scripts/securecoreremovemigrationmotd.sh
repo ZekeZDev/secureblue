@@ -14,4 +14,4 @@
 
 set -oue pipefail
 
-rm /etc/systemd/system/multi-user.target.wants/coreos-oci-migration-motd.service
+rm -f /etc/systemd/system/multi-user.target.wants/coreos-oci-migration-motd.service
