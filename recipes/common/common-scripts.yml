@@ -22,3 +22,4 @@ scripts:
   - enablecommonautoupdate.sh
   - localization.sh
   - addimageinfo.sh
+  - removesudo.sh
