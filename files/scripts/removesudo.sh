@@ -14,7 +14,7 @@
 
 set -oue pipefail
 
-SUDO_PACKAGES_TO_REMOVE=('sudo-python-plugin')
+SUDO_PACKAGES_TO_REMOVE=()
 
 if [[ "$IMAGE_NAME" != *"kinoite"* ]]; then
     SUDO_PACKAGES_TO_REMOVE+=('sudo')
@@ -23,6 +23,12 @@ fi
 if [[ "$IMAGE_NAME" == *"iot"* ]]; then
     SUDO_PACKAGES_TO_REMOVE+=('arm-image-installer')
 fi
+
+if [[ "$IMAGE_NAME" != *"iot"* && "$IMAGE_NAME" != *"securecore"* ]]; then
+    SUDO_PACKAGES_TO_REMOVE+=('sudo-python-plugin')
+fi
+ 
+
 
 rpm-ostree override remove "${SUDO_PACKAGES_TO_REMOVE[@]}"
 
