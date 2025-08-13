@@ -25,4 +25,5 @@ modules:
   - from-file: common/common-modules.yml
   - from-file: common/server-modules.yml
   - from-file: common/selinux-modules.yml
+  - from-file: common/aarch64-modules.yml
   - from-file: common/final-modules.yml

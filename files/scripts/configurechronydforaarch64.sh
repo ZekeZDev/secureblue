@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Copyright 2025 The Secureblue Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -10,21 +12,6 @@
 # distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and limitations under the License.
 
-name: iot-nvidia-open-hardened
+set -oue pipefail
 
-description: "IOT with nvidia-open, hardened"
-
-base-image: quay.io/fedora/fedora-iot
-
-image-version: 42-aarch64
-
-alt-tags:
-  - latest-aarch64
-  
-modules:
-  - from-file: common/common-modules.yml
-  - from-file: common/server-modules.yml
-  - from-file: common/nvidia-install.yml 
-  - from-file: common/selinux-modules.yml
-  - from-file: common/aarch64-modules.yml
-  - from-file: common/final-modules.yml
+sed -i 's/^OPTIONS=-F1 -r/OPTIONS=-F0 -r/' /etc/sysconfig/chronyd
