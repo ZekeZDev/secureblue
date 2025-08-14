@@ -17,6 +17,7 @@ modules:
         - usbguard
         - firewalld
         - policycoreutils-python-utils
+        - unbound
         
     - type: files
       files:
