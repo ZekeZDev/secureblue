@@ -149,7 +149,27 @@ jobs:
     secrets:
       SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
       KERNEL_PRIVKEY: ${{ secrets.KERNEL_PRIVKEY }}
-      
+        
+  iot-main-aarch64:
+    name: Build iot main aarch64
+    if: github.triggering_actor == 'royaloughtness' || github.event_name == 'schedule' || github.event_name == 'push'
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    strategy:
+      fail-fast: false 
+      matrix:
+        recipe:
+          - iot/recipe-iot-main-aarch64.yml
+    uses: ./.github/workflows/build-one-recipe.yml
+    with:
+      recipe: ${{ matrix.recipe }}
+      os: 'ubuntu-24.04-arm'
+    secrets:
+      SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
+      KERNEL_PRIVKEY: ${{ secrets.KERNEL_PRIVKEY }}
+
   silverblue-nvidia:
     name: Build silverblue nvidia images
     if: github.triggering_actor == 'royaloughtness' || github.event_name == 'schedule' || github.event_name == 'push'
