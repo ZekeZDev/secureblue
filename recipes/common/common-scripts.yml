@@ -12,6 +12,9 @@
 
 type: script
 scripts:
+  - manuallyinstalljust.sh
+  - hardenlogindefs.sh
+  - hardened_malloc-pam.sh
   - authselect.sh
   - setfilepermissions.sh
   - httpsmirrors.sh

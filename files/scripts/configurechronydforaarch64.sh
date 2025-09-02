@@ -14,4 +14,5 @@
 
 set -oue pipefail
 
+# chronyd breaks on some aarch64 hardware with the syscall filter enabled
 sed -i 's/^OPTIONS=-F1 -r/OPTIONS=-F0 -r/' /etc/sysconfig/chronyd
