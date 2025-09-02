@@ -41,6 +41,7 @@ jobs:
     with:
       recipe: general/recipe-silverblue-main.yml
       arch: 'x86_64'
+      os: 'ubuntu-24.04'
     secrets:
       SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
       KERNEL_PRIVKEY: ${{ secrets.KERNEL_PRIVKEY }}
@@ -56,6 +57,7 @@ jobs:
     with:
       recipe: general/recipe-silverblue-main-aarch64.yml
       arch: 'aarch64'
+      os: 'ubuntu-24.04-arm'
     secrets:
       SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
       KERNEL_PRIVKEY: ${{ secrets.KERNEL_PRIVKEY }}
@@ -71,6 +73,7 @@ jobs:
     with:
       recipe: general/recipe-kinoite-main.yml
       arch: 'x86_64'
+      os: 'ubuntu-24.04'
     secrets:
       SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
       KERNEL_PRIVKEY: ${{ secrets.KERNEL_PRIVKEY }}
@@ -86,6 +89,7 @@ jobs:
     with:
       recipe: general/recipe-sericea-main.yml
       arch: 'x86_64'
+      os: 'ubuntu-24.04'
     secrets:
       SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
       KERNEL_PRIVKEY: ${{ secrets.KERNEL_PRIVKEY }}
@@ -101,6 +105,7 @@ jobs:
     with:
       recipe: general/recipe-cosmic-main.yml
       arch: 'x86_64'
+      os: 'ubuntu-24.04'
     secrets:
       SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
       KERNEL_PRIVKEY: ${{ secrets.KERNEL_PRIVKEY }}
@@ -120,7 +125,7 @@ jobs:
     uses: ./.github/workflows/build-one-recipe.yml
     with:
       recipe: ${{ matrix.recipe }}
-      arch: 'x86_64'
+      os: 'ubuntu-24.04'
     secrets:
       SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
       KERNEL_PRIVKEY: ${{ secrets.KERNEL_PRIVKEY }}
@@ -140,7 +145,7 @@ jobs:
     uses: ./.github/workflows/build-one-recipe.yml
     with:
       recipe: ${{ matrix.recipe }}
-      arch: 'x86_64'
+      os: 'ubuntu-24.04'
     secrets:
       SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
       KERNEL_PRIVKEY: ${{ secrets.KERNEL_PRIVKEY }}
@@ -162,7 +167,7 @@ jobs:
     uses: ./.github/workflows/build-one-recipe.yml
     with:
       recipe: ${{ matrix.recipe }}
-      arch: 'x86_64'
+      os: 'ubuntu-24.04'
     secrets:
       SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
       KERNEL_PRIVKEY: ${{ secrets.KERNEL_PRIVKEY }}
@@ -184,7 +189,7 @@ jobs:
     uses: ./.github/workflows/build-one-recipe.yml
     with:
       recipe: ${{ matrix.recipe }}
-      arch: 'x86_64'
+      os: 'ubuntu-24.04'
     secrets:
       SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
       KERNEL_PRIVKEY: ${{ secrets.KERNEL_PRIVKEY }}
@@ -206,7 +211,7 @@ jobs:
     uses: ./.github/workflows/build-one-recipe.yml
     with:
       recipe: ${{ matrix.recipe }}
-      arch: 'x86_64'
+      os: 'ubuntu-24.04'
     secrets:
       SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
       KERNEL_PRIVKEY: ${{ secrets.KERNEL_PRIVKEY }}
@@ -228,7 +233,7 @@ jobs:
     uses: ./.github/workflows/build-one-recipe.yml
     with:
       recipe: ${{ matrix.recipe }}
-      arch: 'x86_64'
+      os: 'ubuntu-24.04'
     secrets:
       SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
       KERNEL_PRIVKEY: ${{ secrets.KERNEL_PRIVKEY }}
@@ -264,7 +269,7 @@ jobs:
     uses: ./.github/workflows/build-one-recipe.yml
     with:
       recipe: ${{ matrix.recipe }}
-      arch: 'x86_64'
+      os: 'ubuntu-24.04'
     secrets:
       SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
       KERNEL_PRIVKEY: ${{ secrets.KERNEL_PRIVKEY }}
@@ -286,7 +291,7 @@ jobs:
     uses: ./.github/workflows/build-one-recipe.yml
     with:
       recipe: ${{ matrix.recipe }}
-      arch: 'x86_64'
+      os: 'ubuntu-24.04'
     secrets:
       SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
       KERNEL_PRIVKEY: ${{ secrets.KERNEL_PRIVKEY }}
@@ -323,7 +328,7 @@ jobs:
     uses: ./.github/workflows/build-one-recipe.yml
     with:
       recipe: ${{ matrix.recipe }}
-      arch: 'x86_64'
+      os: 'ubuntu-24.04'
     secrets:
       SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
       KERNEL_PRIVKEY: ${{ secrets.KERNEL_PRIVKEY }}
