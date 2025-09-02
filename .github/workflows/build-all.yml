@@ -270,8 +270,9 @@ jobs:
       KERNEL_PRIVKEY: ${{ secrets.KERNEL_PRIVKEY }}
 
   iot-nvidia:
-    name: Build iot main
+    name: Build iot nvidia
     if: github.triggering_actor == 'royaloughtness' || github.event_name == 'schedule' || github.event_name == 'push'
+    needs: iot-main
     permissions:
       contents: read
       packages: write
