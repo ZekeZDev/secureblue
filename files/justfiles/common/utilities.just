@@ -77,7 +77,10 @@ clean-system:
     #!/usr/bin/bash
     podman image prune -af
     podman volume prune -f
-    flatpak uninstall --unused
+    if command -v flatpak &> /dev/null
+    then
+        flatpak uninstall --unused
+    fi
     rpm-ostree cleanup -bm
 
 # Check for local overrides
@@ -460,6 +463,6 @@ setup-usbguard:
         systemctl enable --now usbguard.service
         usbguard add-user "$SUDO_USER"
     '
-    if ! rpm-ostree status | grep '●' | grep -q 'securecore'; then
+    if ! rpm-ostree status | grep '●' | grep -Eq 'securecore|iot'; then
         systemctl enable --user --now usbguard-notifier.service
     fi
