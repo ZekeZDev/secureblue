@@ -25,8 +25,6 @@ rpm-ostree override replace \
   --from repo='fedora-multimedia' \
     libheif \
     libva \
-    libva-intel-media-driver \
-    intel-mediasdk \
     mesa-dri-drivers \
     mesa-filesystem \
     mesa-libEGL \
