@@ -26,7 +26,6 @@ rpm-ostree override replace \
     libheif \
     libva \
     libva-intel-media-driver \
-    intel-gmmlib \
     intel-mediasdk \
     mesa-dri-drivers \
     mesa-filesystem \
