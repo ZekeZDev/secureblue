@@ -14,8 +14,6 @@
 
 set -oue pipefail
 
-rpm-ostree install selinux-policy-devel
-
 policy_modules=(trivalent flatpakfull nautilus systemsettings)
 
 cil_policy_modules=(

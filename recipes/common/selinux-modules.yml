@@ -18,6 +18,8 @@ modules:
         - from-repo: https://copr.fedorainfracloud.org/coprs/secureblue/selinux-policy/repo/fedora-%OS_VERSION%/secureblue-selinux-policy-fedora-%OS_VERSION%.repo
           packages:
             - selinux-policy
+            - selinux-policy-devel
+            - selinux-policy-targeted
     - type: script
       scripts:
         - installselinuxpolicies.sh
