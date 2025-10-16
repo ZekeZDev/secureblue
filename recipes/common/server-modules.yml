@@ -11,12 +11,14 @@
 # See the License for the specific language governing permissions and limitations under the License.
 
 modules:
-  - type: rpm-ostree
+  - type: dnf
     install:
-      - setools-console
-      - usbguard
-      - firewalld
-      - policycoreutils-python-utils
+      install-weak-deps: false
+      packages:
+        - setools-console
+        - usbguard
+        - firewalld
+        - policycoreutils-python-utils
 
   - type: files
     files:
