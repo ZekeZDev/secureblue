@@ -26,6 +26,9 @@ modules:
           - pipewire-libs-extra
           - libfdk-aac
           - gstreamer1-plugins-ugly
+          - gstreamer1-plugin-libav
+          - mesa-libxatracker
+          - rar
       remove:
         packages:
           - gstreamer1-plugins-ugly-free
@@ -52,11 +55,8 @@ modules:
             - mesa-libEGL
             - mesa-libGL
             - mesa-libgbm
-            - mesa-libxatracker
             - mesa-va-drivers
             - mesa-vulkan-drivers
-            - gstreamer1-plugin-libav
-            - rar
 
     - type: script
       scripts:
