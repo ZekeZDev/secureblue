@@ -28,6 +28,6 @@ if [[ "$IMAGE_NAME" != *"iot"* && "$IMAGE_NAME" != *"securecore"* ]]; then
     SUDO_PACKAGES_TO_REMOVE+=('sudo-python-plugin')
 fi
 
-dnf remove "${SUDO_PACKAGES_TO_REMOVE[@]}"
+dnf remove "${SUDO_PACKAGES_TO_REMOVE[@]}" -y
 
 rm -rf /usr/bin/sudo
