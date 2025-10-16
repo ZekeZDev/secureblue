@@ -23,5 +23,4 @@ scripts:
   - removefedoraflatpakremoteservice.sh
   - localization.sh
   - addimageinfo.sh
-  - enableunboundmigration.sh
   - removesudo.sh
