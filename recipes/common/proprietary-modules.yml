@@ -21,6 +21,7 @@ modules:
             - libheif
             - libva
             - mesa-dri-drivers
+            - gstreamer1-plugin-libav
             - mesa-filesystem
             - mesa-libEGL
             - mesa-libGL
@@ -59,10 +60,8 @@ modules:
         packages:
           - libopenjph
           - heif-pixbuf-loader
-          - ffmpeg-libs
           - ffmpegthumbnailer
           - pipewire-libs-extra
-          - gstreamer1-plugin-libav
           - mesa-libxatracker
       replace:  
         - from-repo: fedora-multimedia
